@@ -1,3 +1,6 @@
+data DATE_INFO;
+X='01Jan1960'D;
+run;
 data empName;
 input name $ 3-6 empId 10-13;
 datalines;
@@ -31,3 +34,10 @@ run;
      by empId;
 
   run;
+data all2;
+        set empName empDept;
+run;
+data all3;
+        set empName empDept;
+        by empId;
+run;
